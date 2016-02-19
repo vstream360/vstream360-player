@@ -17,7 +17,7 @@ Für weitere Informationen besuchen sie unsere Website: www.videostream360.com
 
 
 ## Voraussetzung
-Grundlage für die Benutzung des Players ist ein gültiger Lizenzcode (Licence ID). Entscheiden sie welches Produkt für sie das richtige ist und erstellen sie sich eine neue Lizenz. http://show.videostream360.com
+Grundlage für die Benutzung des Players ist ein gültiger Lizenzcode (Licence ID). Entscheiden sie welches Produkt für sie das richtige ist und erstellen sie sich eine neue Lizenz. http://shop.videostream360.com
 
 Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFrame in ihre Seite einbinden. Oder aber verwenden sie die Javascript API, um gezielt die Funktionen des Players zu steuern.
 

@@ -40,13 +40,6 @@ Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFr
 ### per Javascript
 Zunächste muss der vstream360.js Player in den HEAD des THML Dokuments eingebunden werden:
 
-***Self-hosted***
-````html
-<script type="text/javascript" src="js/vstream360/vstream360.js"></script>
-````
-
-
-***Cloud-hosted***
 ````html
 <script type="text/javascript" src="//cdn.vstream360.net/<licenceID>/player/vstream360.js"></script>
 ````

@@ -61,7 +61,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
         'width' : '100%',
         'height' : '100%',
         'primary' : 'auto',
-        'medialist' : '//cdn.vstream360.net/assets/<licenceID>/medialist.json'
+        'medialist' : '<medialist>'
         }
     });
 
@@ -74,7 +74,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
 - `width`:  (value in `%` or `px`) Breite des Players
 - `height`: (value in `%` or `px`) Breite des Players
 - `primary`: (default `'auto'`) Playback Platform. Erlaube Strings `'auto'`, `'html5'`, `'flash'`
-- `medialist` Pfad zur Projekt-medialist (Diese wird im Backend angezeigt)
+- `medialist` Pfad zur Projekt-medialist JSON (Diese erhalten sie im Backend)
 
 ###optional###
 - `playlistbar` Wenn sie mehrere Streams in einem Player anzeigen möchten, können sie die Thumbnail Navigation aktivieren. Geben sie dazu die Position `position` und die Breite `size` in `px` an.

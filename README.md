@@ -17,7 +17,7 @@ Für weitere Informationen besuchen sie unsere Website: www.videostream360.com
 
 
 ## Voraussetzung
-Grundlage für die Benutzung des Players ist ein gültiger Lizenzcode (Licence ID). Entscheiden sie welches Produkt für sie das richtige ist und erstellen sie sich eine neue Lizenz. http://shop.videostream360.com
+Grundlage für die Benutzung des Players ist ein gültiger Lizenzcode (eventID). Entscheiden sie welches Produkt für sie das richtige ist und erstellen sie sich eine neue Lizenz. http://shop.videostream360.com
 
 Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFrame in ihre Seite einbinden. Oder aber verwenden sie die Javascript API, um gezielt die Funktionen des Players zu steuern.
 
@@ -27,7 +27,7 @@ Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFr
 ### per iFrame
 
 ````html
-<iFrame src="//cdn.vstream360.net/assets/<licenceID>/index.html"
+<iFrame src="//cdn.vstream360.net/assets/<eventID>/index.html"
     width="800"
     height="450"
     frameborder="0"
@@ -41,7 +41,7 @@ Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFr
 Zunächste muss der vstream360.js Player in den HEAD des THML Dokuments eingebunden werden:
 
 ````html
-<script type="text/javascript" src="//cdn.vstream360.net/<licenceID>/player/vstream360.js"></script>
+<script type="text/javascript" src="//cdn.vstream360.net/<eventID>/player/vstream360.js"></script>
 ````
 
 
@@ -88,7 +88,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
         'width' : '100%',
         'height' : '100%',
         'primary' : 'auto',
-        'medialist' : '//cdn.vstream360.net/assets/<licenceID>/medialist.json',
+        'medialist' : '//cdn.vstream360.net/assets/<eventID>/medialist.json',
         'playlistbar' : {'position' : 'right', 'size': 180}
         }
     });

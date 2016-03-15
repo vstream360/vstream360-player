@@ -122,6 +122,18 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
     vstream360('vstream360-player').pause();
 ````
 
+- `stop` : Methode zum Stoppen des Videos
+*Beispiel:*
+````javascript
+    vstream360('vstream360-player').stop();
+````
+
+- `dispose` : Löschen der Playerinstanz
+*Beispiel:*
+````javascript
+    vstream360('vstream360-player').dispose();
+````
+
 
 - `seek` : Springen zu einer bestimmten Stelle im Video (nur für onDemand Videos)
 *Beispiel:*

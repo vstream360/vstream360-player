@@ -88,7 +88,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
         'width' : '100%',
         'height' : '100%',
         'primary' : 'auto',
-        'medialist' : '//cdn.vstream360.net/assets/<eventID>/medialist.json',
+        'medialist' : '//cdn.vstream360.net/<eventID>/medialist.json',
         'playlistbar' : {'position' : 'right', 'size': 180}
         }
     });

@@ -27,7 +27,7 @@ Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFr
 ### per iFrame
 
 ````html
-<iFrame src="//cdn.vstream360.net/assets/<eventID>/index.html"
+<iFrame src="//cdn.vstream360.net/<eventID>/index.html"
     width="800"
     height="450"
     frameborder="0"

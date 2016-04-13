@@ -173,6 +173,16 @@ vstream360('vstream360-player').onHotspotChanged(function(data){
 });
 ````
 
+- `onHotspotClicked` : Callback Funktion die aufgerufen wird, wenn ein Hotspot geklickt wurde. Die Funktion liefert den Parameter:
+    +  `id` - id des Hotspots
+
+*Beispiel*
+````javascript
+vstream360('vstream360-player').onHotspotClicked(function(data){
+    console.log(data);
+});
+````
+
 
 
 ## Demos

@@ -183,6 +183,15 @@ vstream360('vstream360-player').onHotspotClicked(function(data){
 });
 ````
 
+- `onTimeupdate` : Callback Funktion welche die Abspielposition ausgibt. Die Funktion liefert den Parameter:
+    +  `currentTime` - Millisekunden der Abspielposition
+
+*Beispiel*
+````javascript
+vstream360('vstream360-player').onHotspotClicked(function(data){
+    console.log(data);
+});
+````
 
 
 ## Demos

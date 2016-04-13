@@ -179,7 +179,7 @@ vstream360('vstream360-player').onHotspotChanged(function(data){
 *Beispiel*
 ````javascript
 vstream360('vstream360-player').onHotspotClicked(function(data){
-    console.log(data);
+    console.log(data.id);
 });
 ````
 
@@ -188,8 +188,8 @@ vstream360('vstream360-player').onHotspotClicked(function(data){
 
 *Beispiel*
 ````javascript
-vstream360('vstream360-player').onHotspotClicked(function(data){
-    console.log(data);
+vstream360('vstream360-player').onTimeupdate(function(data){
+    console.log(data.currentTime);
 });
 ````
 

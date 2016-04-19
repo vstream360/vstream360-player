@@ -112,7 +112,6 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
 
 ````
 
-- `playlistbar' : {position : 'right', size: 180}`
 - `mobileFallback`: Callback Funktion die aufgerufen wird, wenn der HTML5 oder Flash-Player auf dem Gerät nativ nicht unterstützt wird. Sie können somit eine alternative Navigation erstellen, um Streams per URL Scheme in der mobilen App zu öffnen.
 
 ## Funktionen

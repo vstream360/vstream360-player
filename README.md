@@ -77,8 +77,25 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
 - `medialist` Pfad zur Projekt-medialist JSON (Diese erhalten sie im Backend)
 
 ###optional###
-- `playlistbar` Wenn sie mehrere Streams in einem Player anzeigen möchten, können sie die Thumbnail Navigation aktivieren. Geben sie dazu die Position `position` und die Breite `size` in `px` an.
+- `playlistbar` Wenn sie mehrere Streams in einem Player anzeigen möchten, können sie die Thumbnail Navigation aktivieren. Über einen Sideclip Button kann er geöffnet und geschlossen werden. Folgende Parameter können verwendet werden:
+-  `'show'`: (default) Playlistbar wird angezeigt. (auf Mobile Devices wird er initial automatisch geschlossen)
+-  `'hide'`: Playlistbar ist geschlossen, kann aber über den Sideclip aktiviert werden
+-  `'none'`: kein Playlistbar
 
+*Beispiel:*
+````javascript
+
+    vstream360('vstream360-player').create({
+        'width' : '100%',
+        'height' : '100%',
+        'primary' : 'auto',
+        'medialist' : '//cdn.vstream360.net/<eventID>/medialist.json',
+        'playlistbar' : 'show'
+        }
+    });
+
+````
+ 
 - `controls`: (default: ["media", "compass"] Hier können die Playerelemente Mediacontrol und 360° Kompass ein/ausblenden
 
 *Beispiel:*
@@ -89,7 +106,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
         'height' : '100%',
         'primary' : 'auto',
         'medialist' : '//cdn.vstream360.net/<eventID>/medialist.json',
-        'playlistbar' : {'position' : 'right', 'size': 180}
+        'controls' : ["media", "compass"]
         }
     });
 

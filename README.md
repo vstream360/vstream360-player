@@ -78,9 +78,9 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
 
 ###optional###
 - `playlistbar` Wenn sie mehrere Streams in einem Player anzeigen möchten, können sie die Thumbnail Navigation aktivieren. Über einen Sideclip Button kann er geöffnet und geschlossen werden. Folgende Parameter können verwendet werden:
--  `'show'`: (default) Playlistbar wird angezeigt. (auf Mobile Devices wird er initial automatisch geschlossen)
--  `'hide'`: Playlistbar ist geschlossen, kann aber über den Sideclip aktiviert werden
--  `'none'`: kein Playlistbar
+    + `'show'`: (default) Playlistbar wird angezeigt. (auf Mobile Devices wird er initial automatisch geschlossen)
+    +  `'hide'`: Playlistbar ist geschlossen, kann aber über den Sideclip aktiviert werden
+    +  `'none'`: kein Playlistbar
 
 *Beispiel:*
 ````javascript

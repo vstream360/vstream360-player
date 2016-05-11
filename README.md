@@ -54,7 +54,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
 
 *Beispiel*
 ````html
-<div id="my-vstream360-player"></div>
+<div id="vstream360-player"></div>
 
 <script>
     vstream360('vstream360-player').create({

@@ -15,7 +15,6 @@
 
 - [Requirements](#requirements)
 - [Usage](#usage)
-- [Getting started](#getting-started)
 - [Options](#options)
 - [Functions](#functions)
 - [Demos](#demos)
@@ -229,4 +228,5 @@ vstream360('vstream360-player').onTimeupdate(function(data){
 ## Demos
 
 ## Further infomation
-http://videostream360.com
+http://www.videostream360.com
+http://shop.videostream360.com

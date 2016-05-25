@@ -1,11 +1,19 @@
-# videostream360 player
-Der erste 360°-Livestream-Player in HTML5 mit Backend zur Verwaltung von Livestreams, interaktiven Hotspots und vielem mehr.
-Für weitere Informationen besuchen sie unsere Website: www.videostream360.com
+# <img height="80px" src="http://videostream360.com/wp-content/uploads/2015/03/687_VID_Logo_4c_300dpi_200.png" alt="videostream360 Player Logo" title="videostream360 Player Logo"/>
 
-## Inhalt
+> WE LOVE 360°-LIVE.
+> 
+> Videostream360 player is the popular 360° video playback for LIVE and OnDemand streams across browsers and file types.
+> It empowers you to embed your 360° content in your platform to share your experience with high availability.
+> With our interactive backend you can manage multiple streams and append interactive content like hotspots.
+> The Javascript API gives your the posibility to programmatically interact with your VR content to create awesome user experiences.
+> For more information visit out website: www.videostream360.com
+> In our shop you also order a All In One solution with camera included to start right now!
+
+
+## Content
 <!-- MarkdownTOC autolink=true bracket=round depth=2-->
 
-- [Voraussetzung](#voraussetzung)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Getting started](#getting-started)
 - [Optionen](#optionen)
@@ -15,16 +23,21 @@ Für weitere Informationen besuchen sie unsere Website: www.videostream360.com
 <!-- /MarkdownTOC -->
 
 
-
-## Voraussetzung
-Grundlage für die Benutzung des Players ist ein gültiger Lizenzcode (eventID). Entscheiden sie welches Produkt für sie das richtige ist und erstellen sie sich eine neue Lizenz. http://shop.videostream360.com
+## Requirements
+To start with the 360° player you have to create a licence first on http://shop.videostream360.com. Create a new event in the interactive backend to get your eventID and use the cloudhosted player. The backend is the central WYSIWYG platform to manage all your 360° degree settings like hotspots, watermark, playlists and much more with.
+That's all!
 
 Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFrame in ihre Seite einbinden. Oder aber verwenden sie die Javascript API, um gezielt die Funktionen des Players zu steuern.
 
 
 ## Installation
+You can use the player as:
+- <embed code> iFrame
+- WordPress Plugin
+- with the Javascript api to interact programmatically with the player
+- Mobile App
 
-### per iFrame
+### embed as iFrame
 
 ````html
 <iFrame src="//cdn.vstream360.net/<eventID>/index.html"
@@ -37,22 +50,21 @@ Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFr
 >no iframes fallback</iframe>
 ````
 
-### per Javascript
-Zunächste muss der vstream360.js Player in den HEAD des THML Dokuments eingebunden werden:
+### use Javascript API (Step 1)
+Simply put the Cloud Player URL to the <head> of your HTML Page to get the entire access to the API of the player and override default settings.
 
 ````html
 <script type="text/javascript" src="//cdn.vstream360.net/<eventID>/player/vstream360.js"></script>
 ````
 
 
+## Getting started with Javascript API (Step 2)
 
-## Getting started
+***Use the player***
+Once the player is placed in the <head> of your code write the embed code for your page <body> where you'd like your player to appear.
+To show your player:
 
-***Initialisierung des Player***
-
-Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player initialisiert werden, indem man im die ID des HTML Elements übergibt: vstream360(`id des html elements`).create({`options`});
-
-*Beispiel*
+*Minimum example:*
 ````html
 <div id="vstream360-player"></div>
 
@@ -67,6 +79,7 @@ Zuerst wird ein `<div />` erstellt und eine id vergeben. Nun kann der Player ini
 
 </script>
 ````
+> vstream360(`<ID of html dom element>`).create({`options`});
 
 
 ## Optionen

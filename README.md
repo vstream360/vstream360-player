@@ -2,12 +2,9 @@
 
 > WE LOVE 360°-LIVE.
 > 
-> Videostream360 player is the popular 360° video playback for LIVE and OnDemand streams across browsers and file types. Its based on HTML5 WebGL. If a device doesn't support this feature the Flashplayer fallback will automatically used or the Mobile App (Works with URL'scheme).
-> It empowers you to embed your 360° content in your platform to share your experience with high availability.
-> With our interactive backend you can manage multiple streams and append interactive content like hotspots.
-> The Javascript API gives your the posibility to programmatically interact with your VR content to create awesome user experiences.
-> For more information visit out website: www.videostream360.com
-> In our shop you also order a All In One solution with camera included to start right now!
+>videostream360’s panoramic player is the smart and easy-to-use 360° video playback for LIVE and OnDemand streams on any browser and file type. It is based on HTML5 WebGL. If a device doesn't support this feature the Flashplayer fallback will be called up automatically or - on mobile devices - the Mobile App that works with URL'scheme will take over. 
+>
+>The player empowers you to embed your 360° content in your platform to share your experience with high availability. With our interactive backend platform you can manage multiple streams and append interactive content like clickable hotspots. The Javascript API gives your the possibility to programmatically interact with your VR content to create awesome user experiences. 
 
 
 ## Content

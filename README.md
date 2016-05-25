@@ -17,7 +17,7 @@
 - [Usage](#usage)
 - [Getting started](#getting-started)
 - [Options](#options)
-- [Funktionen](#funktionen)
+- [Functions](#functions)
 - [Demos](#demos)
 
 <!-- /MarkdownTOC -->

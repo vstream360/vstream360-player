@@ -2,7 +2,7 @@
 
 > WE LOVE 360°-LIVE.
 > 
-> Videostream360 player is the popular 360° video playback for LIVE and OnDemand streams across browsers and file types.
+> Videostream360 player is the popular 360° video playback for LIVE and OnDemand streams across browsers and file types. Its based on HTML5 WebGL. If a device doesn't support this feature the Flashplayer fallback will automatically used or the Mobile App (Works with URL'scheme).
 > It empowers you to embed your 360° content in your platform to share your experience with high availability.
 > With our interactive backend you can manage multiple streams and append interactive content like hotspots.
 > The Javascript API gives your the posibility to programmatically interact with your VR content to create awesome user experiences.
@@ -49,10 +49,10 @@ You can use the player as:
 ````
 
 ### Use Javascript API
-The interface between backend where you manage your streams and the frontend player is the so called medialist. Thats a JSON file(created by the backend) which is loaded by the player and man 
+The interface between backend where you manage your streams and the frontend player is the so called medialist. Thats a JSON file(created by the backend) which is loaded by the player and manage the video settings.
 
 #### load the player API (Step 1)
-Simply put the Cloud Player URL to the <head> of your HTML Page to get the entire access to the API of the player and override default settings.
+Simply put the cloud player URL to the <head> of your HTML Page to get the entire access to the API of the player and override default settings.
 
 ````html
 <script type="text/javascript" src="//cdn.vstream360.net/<eventID>/player/vstream360.js"></script>
@@ -60,7 +60,6 @@ Simply put the Cloud Player URL to the <head> of your HTML Page to get the entir
 
 
 #### create a player (Step 2)
-
 Once the player is placed in the <head> of your code write the embed code for your page <body> where you'd like your player to appear.
 
 *Minimum example:*
@@ -88,15 +87,15 @@ vstream360(`<ID of html dom element>`).create({`options`});
 - `width`:  (value in `%` or `px`) Width of the player
 - `height`: (value in `%` or `px`) Height of the player
 - `primary`: (default `'auto'`) Playback Platform. [Possible values: `'auto'`, `'html5'`, `'flash'`]
-- `medialist` URL path to your medialist. This is the  Pfad zur Projekt-medialist JSON (Diese erhalten sie im Backend)
+- `medialist` URL path to your medialist. (Displayed in the Backend)
 
 ###optional###
-- `playlistbar` Wenn sie mehrere Streams in einem Player anzeigen möchten, können sie die Thumbnail Navigation aktivieren. Über einen Sideclip Button kann er geöffnet und geschlossen werden. Folgende Parameter können verwendet werden:
-    + `'show'`: (default) Playlistbar wird angezeigt. (auf Mobile Devices wird er initial automatisch geschlossen)
-    +  `'hide'`: Playlistbar ist geschlossen, kann aber über den Sideclip aktiviert werden
-    +  `'none'`: kein Playlistbar
+- `playlistbar` If you've created more than one stream a playlist with thumbnails appears at the right side of the player. Users can open and close this playlist with a button. Use the following parameters to setup this playlistbar:
+    + `'show'`: (default) show the playlistbar. (On mobile devices it have the closed status initialiy)
+    +  `'hide'`: playlistbar is closed but the toggle button appears to open it.
+    +  `'none'`: no playlistbar will be created
 
-*Beispiel:*
+*Example:*
 ````javascript
 
     vstream360('vstream360-player').create({
@@ -110,9 +109,9 @@ vstream360(`<ID of html dom element>`).create({`options`});
 
 ````
  
-- `controls`: (default: ["media", "compass"] Hier können die Playerelemente Mediacontrol und 360° Kompass ein/ausblenden
+- `controls`: (Array default: ["media", "compass"] You can define if mediacontrols or 360° compass (at the top of the player) should be visible
 
-*Beispiel:*
+*Example:*
 ````javascript
 
     vstream360('vstream360-player').create({
@@ -126,97 +125,100 @@ vstream360(`<ID of html dom element>`).create({`options`});
 
 ````
 
-- `mobileFallback`: Callback Funktion die aufgerufen wird, wenn der HTML5 oder Flash-Player auf dem Gerät nativ nicht unterstützt wird. Sie können somit eine alternative Navigation erstellen, um Streams per URL Scheme in der mobilen App zu öffnen.
+- `mobileFallback`: If your platform doesn't A callback function which is triggered if the mobile app fallback selected.
 
-## Funktionen
+## Functions
 
-- `ready` : Callback Funktion die aufgerufen wird, sobald der Player initialisiert wurde.
-
-*Beispiel:*
+- `ready` : A callback function that is called when player is created and ready to play. This function returs two parameters.
+    + `'mode'`: String: 'html5' or 'flash'
+    + `'data'`: JSON Object: the full medialist content. So you can handle data like geolocation to create maps or other interactive stuff.
+    
+*Example:*
 ````javascript
-    vstream360('vstream360-player').ready(function(){
-        alert("ready");
+    vstream360('vstream360-player').ready(function(mode, data){
+        console.log("ready: " + mode);
+        console.log("ready: " + data);
     });
 ````
 
 
-- `play` : Methode zum Abspielen des Videos
-*Beispiel:*
+- `play` : Method to play the current loaded stream
+*Example:*
 ````javascript
     vstream360('vstream360-player').play();
 ````
 
-- `pause` : Methode zum Anhalten des Videos
-*Beispiel:*
+- `pause` : Method to pause the current loaded stream
+*Example:*
 ````javascript
     vstream360('vstream360-player').pause();
 ````
 
-- `stop` : Methode zum Stoppen des Videos
-*Beispiel:*
+- `stop` : Method to stop the current loaded stream
+*Example:*
 ````javascript
     vstream360('vstream360-player').stop();
 ````
 
-- `dispose` : Löschen der Playerinstanz
-*Beispiel:*
+- `dispose` : Method to stop the current loaded stream and delete the player instance.
+*Example:*
 ````javascript
     vstream360('vstream360-player').dispose();
 ````
 
 
-- `seek` : Springen zu einer bestimmten Stelle im Video (nur für onDemand Videos)
-*Beispiel:*
+- `seek` : Method to jump to a specific position of the stream(For onDemand). Value in seconds.
+*Example:*
 ````javascript
     vstream360('vstream360-player').seek(5);
 ````
 
-- `volume` : Einstellen der Lautstärke des Videos von 0 - 1
-*Beispiel:*
+- `volume` : Set up the volume of the player (values between: 0 - 1)
+*Example:*
 ````javascript
     vstream360('vstream360-player').volume(0.5);
 ````
 
-- `mute` : Stummschalten der Lautstärke
-*Beispiel:*
+- `mute` : Mutes the player
+*Example:*
 ````javascript
     vstream360('vstream360-player').mute(true);
 ````
 
 
-- `enableHotspotMode` : (default: false) Mit diese Methode kann der Hotspotmodus ein und ausgeschalten werden. Somit lassen sich Hotspots per Drag and Drop verschieben.
+- `enableHotspotMode` : (default: false) Method to enable the hotspot drag mode. So you can move hotspots an get the new position.
 
-*Beispiel*
+*Example*
 ````javascript
 vstream360('vstream360-player').enableHotspotMode(true);
 ````
     
-- `onHotspotChanged` : Callback Funktion die aufgerufen wird, wenn ein Hotspot verschoben wurde. Die Funktion liefert die Parameter:
-    +  `vangle` - vertikaler Winkel in Grad -90° < 0 < 90°
-    +  `hangle` - horizontaler Winkel in Grad: 0 - 360°
-    +  `id` - id des Hotspots
+- `onHotspotChanged` : Callback function that is called if the hotspot is moved. This function returns the follwing parameters:
+    +  `vangle` - vertical arrow in degrees -90° < 0 < 90°
+    +  `hangle` - horizontal arrow in degrees: 0 - 360°
+    +  `id` - id of the motspot that is moved
 
-*Beispiel*
+*Example*
 ````javascript
 vstream360('vstream360-player').onHotspotChanged(function(data){
     console.log(data);
 });
 ````
 
-- `onHotspotClicked` : Callback Funktion die aufgerufen wird, wenn ein Hotspot geklickt wurde. Die Funktion liefert den Parameter:
-    +  `id` - id des Hotspots
+- `onHotspotClicked` : Callback function that is called if a hotspot was clicked. Use this to handle User interactions. This function returns the follwing parameters:
+    +  `id` - id of the hotspot
 
-*Beispiel*
+*Example*
 ````javascript
 vstream360('vstream360-player').onHotspotClicked(function(data){
     console.log(data.id);
 });
 ````
 
-- `onTimeupdate` : Callback Funktion welche die Abspielposition ausgibt. Die Funktion liefert den Parameter:
-    +  `currentTime` - Millisekunden der Abspielposition
+- `onTimeupdate` : Callback function to get the playheadtime of the video. It returns the following parmeters:
+    +  `currentTime` - milliseconds of the position
 
-*Beispiel*
+*Example*
 ````javascript
 vstream360('vstream360-player').onTimeupdate(function(data){
     console.log(data.currentTime);
@@ -226,4 +228,5 @@ vstream360('vstream360-player').onTimeupdate(function(data){
 
 ## Demos
 
+## Further infomation
 http://videostream360.com

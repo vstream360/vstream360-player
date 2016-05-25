@@ -14,9 +14,9 @@
 <!-- MarkdownTOC autolink=true bracket=round depth=2-->
 
 - [Requirements](#requirements)
-- [Installation](#installation)
+- [Usage](#usage)
 - [Getting started](#getting-started)
-- [Optionen](#optionen)
+- [Options](#options)
 - [Funktionen](#funktionen)
 - [Demos](#demos)
 
@@ -24,17 +24,15 @@
 
 
 ## Requirements
-To start with the 360° player you have to create a licence first on http://shop.videostream360.com. Create a new event in the interactive backend to get your eventID and use the cloudhosted player. The backend is the central WYSIWYG platform to manage all your 360° degree settings like hotspots, watermark, playlists and much more with.
+To start with the 360° player you have to create a licence first on http://shop.videostream360.com. Create a new event in the interactive backend to get your eventID and use the cloudhosted player. The backend is the central WYSIWYG platform to manage all your 360° degree settings like hotspots, watermark, playlists and much more with. 
 That's all!
 
-Anschließend können sie sofort beginnen und ihren eigenen 360° Player als iFrame in ihre Seite einbinden. Oder aber verwenden sie die Javascript API, um gezielt die Funktionen des Players zu steuern.
 
-
-## Installation
+## Usage
 You can use the player as:
 - <embed code> iFrame
 - WordPress Plugin
-- with the Javascript api to interact programmatically with the player
+- with the Javascript API to interact programmatically with the player
 - Mobile App
 
 ### embed as iFrame
@@ -50,7 +48,10 @@ You can use the player as:
 >no iframes fallback</iframe>
 ````
 
-### use Javascript API (Step 1)
+### Use Javascript API
+The interface between backend where you manage your streams and the frontend player is the so called medialist. Thats a JSON file(created by the backend) which is loaded by the player and man 
+
+#### load the player API (Step 1)
 Simply put the Cloud Player URL to the <head> of your HTML Page to get the entire access to the API of the player and override default settings.
 
 ````html
@@ -58,11 +59,9 @@ Simply put the Cloud Player URL to the <head> of your HTML Page to get the entir
 ````
 
 
-## Getting started with Javascript API (Step 2)
+#### create a player (Step 2)
 
-***Use the player***
 Once the player is placed in the <head> of your code write the embed code for your page <body> where you'd like your player to appear.
-To show your player:
 
 *Minimum example:*
 ````html
@@ -79,15 +78,17 @@ To show your player:
 
 </script>
 ````
-> vstream360(`<ID of html dom element>`).create({`options`});
 
 
-## Optionen
+
+## Options
+vstream360(`<ID of html dom element>`).create({`options`});
+
 ###required###
-- `width`:  (value in `%` or `px`) Breite des Players
-- `height`: (value in `%` or `px`) Breite des Players
-- `primary`: (default `'auto'`) Playback Platform. Erlaube Strings `'auto'`, `'html5'`, `'flash'`
-- `medialist` Pfad zur Projekt-medialist JSON (Diese erhalten sie im Backend)
+- `width`:  (value in `%` or `px`) Width of the player
+- `height`: (value in `%` or `px`) Height of the player
+- `primary`: (default `'auto'`) Playback Platform. [Possible values: `'auto'`, `'html5'`, `'flash'`]
+- `medialist` URL path to your medialist. This is the  Pfad zur Projekt-medialist JSON (Diese erhalten sie im Backend)
 
 ###optional###
 - `playlistbar` Wenn sie mehrere Streams in einem Player anzeigen möchten, können sie die Thumbnail Navigation aktivieren. Über einen Sideclip Button kann er geöffnet und geschlossen werden. Folgende Parameter können verwendet werden:
